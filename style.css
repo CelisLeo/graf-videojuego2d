@@ -1,0 +1,39 @@
+/* style.css - estilos básicos para Pumpkin Panic (v0.1) */
+
+/* Header logo */
+.header-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+/* Canvas container */
+.canvas-wrap {
+  background: #111;
+  border-radius: 8px;
+  padding: 6px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+
+/* Canvas */
+#gameCanvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  background-color: black; /* fallback */
+  border-radius: 6px;
+  cursor: none; /* ocultamos cursor nativo para dibujar nuestro puntero */
+  image-rendering: optimizeQuality;
+}
+
+/* Small overlay hint text */
+.canvas-hint {
+  pointer-events: none;
+}
+
+/* Reticle drawn by JS - optional styling for alignment if needed */
+
+/* Footer */
+footer {opacity: 0.9; font-size: 0.9rem;}
