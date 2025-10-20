@@ -20,7 +20,51 @@ Su propósito es demostrar el manejo de:
 
 ---
 
-# 🧾 Historial de versiones
+# 📜 Historial de versiones
+
+| Versión | Fecha | Descripción breve |
+|----------|--------|------------------|
+| 0.2 | 20 Oct 2025 | Efectos de sonido, rediseño visual, pantalla completa |
+| 0.1 | 19 Oct 2025 | Proyecto base: estructura inicial del videojuego |
+
+---
+
+# 🧩 Versión 0.2 – Mejora visual, efectos de sonido y estructura general
+
+### 📅 Fecha del commit:
+20 Octubre 2025
+
+### 🎯 Contexto:
+Se implementó una mejora visual y auditiva al videojuego, buscando un diseño más limpio, moderno y con mejor experiencia de usuario.  
+Además, se agregaron efectos de sonido que acompañan acciones importantes dentro del juego.
+
+### ⚙️ Objetivo:
+- Mejorar la presentación general del videojuego.  
+- Integrar sonidos de interacción (efecto *pop* y música de *intro*).  
+- Reestructurar el diseño de la página para una distribución más profesional y clara.
+
+### 💡 Justificación:
+El diseño anterior se centraba únicamente en el canvas, sin jerarquía visual ni distribución adecuada de los elementos.  
+Esta actualización permite al jugador tener información accesible sin interferir en la jugabilidad, y una inmersión auditiva básica.
+
+### 🔧 Cambios realizados:
+1. **Nuevo efecto de sonido:**  
+   - Archivo `pop.mp3`, reproducido al realizar determinadas acciones (por ejemplo, al eliminar o interactuar con un objeto).  
+2. **Intro musical:**  
+   - Archivo `intro.mp3`, reproducido al iniciar el nivel o cargar la pantalla principal.
+3. **Rediseño estructural del HTML:**  
+   - El **título principal** se mantiene arriba.  
+   - Las **instrucciones** se ubican justo debajo del título (sin sobreponerse al canvas).  
+   - El **puntaje** se mueve a la **parte superior derecha**.  
+   - La **información del juego** (estado, descripción o créditos) ahora aparece en la **parte inferior**.  
+   - Se agregó un **margen visual** alrededor del canvas, para no ocupar toda la pantalla y dar una mejor estética.  
+4. **Transiciones monocromáticas** entre secciones, para suavizar el paso entre distintas áreas visuales.  
+5. **Modo Pantalla Completa:**  
+   - Se añadió un botón que permite expandir el canvas para jugar en pantalla completa.
+
+### 🧠 Conclusiones:
+Con esta actualización, el videojuego alcanza una mejor presentación, sonido ambiental y estructura visual clara.  
+Se sientan las bases para futuras mejoras en jugabilidad, niveles y menús dinámicos.
 
 ---
 
@@ -65,31 +109,11 @@ El objetivo es cumplir con todos los requerimientos mínimos del examen y dejar 
 
 ---
 
-# 📂 Estructura del Proyecto
-📦 PumpkinPanic/
-    ├── index.html
-    ├── style.css
-    ├── main.js
-    ├── README.md
-    └── assets/
-        ├── BG.jpg
-        ├── pumpkin.png
-        └── bg-music.mp3
-        
----
-
 # 💡 Próximas versiones previstas
 | Versión | Objetivo principal | Descripción breve |
 |----------|--------------------|-------------------|
-| v0.2 | Mejora de jugabilidad | Agregar niveles, sistema de tiempo y dificultad progresiva. |
-| v0.3 | Efectos de sonido | Incorporar sonidos al eliminar calabazas y efectos visuales más dinámicos. |
-| v0.4 | Menú inicial y reinicio | Crear pantalla de inicio, game over y opción de reinicio. |
-| v0.5 | Pulido final | Optimización, ajustes visuales y documentación completa. |
-
----
-
-# 🧑‍💻 Control de versiones (Git)
-**Commit inicial:**
+| v0.3 | Menú inicial y reinicio | Crear pantalla de inicio, game over y opción de reinicio. |
+| v0.4 | Pulido final | Optimización, ajustes visuales y documentación completa. |
 
 ---
 
