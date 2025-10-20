@@ -14,7 +14,7 @@ El juego está diseñado para ejecutarse en navegador, utilizando tecnologías w
 
 Su propósito es demostrar el manejo de:
 - Elementos gráficos en movimiento aleatorio dentro de un canvas.
-- Interactividad con el usuario mediante el mouse.
+- Interactividad con el usuario mediante el mouse y teclado.
 - Integración de imágenes, íconos, música y efectos visuales.
 - Conceptos de animación, eventos, detección de colisiones y control del renderizado 2D.
 
@@ -24,8 +24,46 @@ Su propósito es demostrar el manejo de:
 
 | Versión | Fecha | Descripción breve |
 |----------|--------|------------------|
+| 0.3 | 20 Oct 2025 | Movimiento del cursor con teclado + mouse, mejoras visuales y estilización |
 | 0.2 | 20 Oct 2025 | Efectos de sonido, rediseño visual, pantalla completa |
-| 0.1 | 19 Oct 2025 | Proyecto base: estructura inicial del videojuego |
+| 0.1 | 20 Oct 2025 | Proyecto base: estructura inicial del videojuego |
+
+---
+
+# 🧩 Versión 0.3 – Movimiento por teclado y mejoras visuales
+
+### 📅 Fecha del commit:
+20 Octubre 2025
+
+### 🎯 Contexto:
+Se agregó movimiento híbrido del cursor, permitiendo control por teclado y mouse al mismo tiempo.  
+Además, se estilizó mejor la visualización de las instrucciones y la puntuación, logrando un diseño más limpio y funcional.
+
+### ⚙️ Objetivo:
+- Permitir mover el cursor con las **flechas del teclado** además del mouse.  
+- Mejorar la presentación visual de las instrucciones y la ubicación del puntaje.  
+- Mantener la compatibilidad con los efectos de sonido y la música de fondo.  
+
+### 💡 Justificación:
+Esta versión mejora la jugabilidad, accesibilidad y experiencia del usuario, manteniendo la estética y la fluidez de la animación del juego.
+
+### 🔧 Cambios realizados:
+1. **Control híbrido del cursor:**  
+   - Flechas del teclado (`ArrowUp`, `ArrowDown`, `ArrowLeft`, `ArrowRight`) para mover el puntero.  
+   - Movimiento del mouse sigue activo y sincronizado.  
+2. **Clic y barra espaciadora:**  
+   - Eliminación de calabazas mediante clic o presionando `Espacio`.  
+3. **Estilización de la interfaz:**  
+   - Instrucciones colocadas debajo del título.  
+   - Puntaje ubicado en la esquina superior derecha.  
+   - Fondo y canvas con bordes, sombras y gradientes más definidos.  
+4. **Código documentado y refactorizado:**  
+   - Comentarios claros sobre cada sección: sprites, audio, bucle de animación, eventos y lógica de colisiones.  
+5. **Modo pantalla completa:**  
+   - Botón funcional para expandir o salir del modo fullscreen.
+
+### 🧠 Conclusiones:
+La versión 0.3 introduce un control más completo y accesible, además de mejoras visuales y de código que facilitan futuras actualizaciones como niveles, dificultad progresiva o animaciones adicionales.
 
 ---
 
@@ -49,71 +87,61 @@ Esta actualización permite al jugador tener información accesible sin interfer
 
 ### 🔧 Cambios realizados:
 1. **Nuevo efecto de sonido:**  
-   - Archivo `pop.mp3`, reproducido al realizar determinadas acciones (por ejemplo, al eliminar o interactuar con un objeto).  
+   - Archivo `pop.mp3`, reproducido al eliminar o interactuar con calabazas.  
 2. **Intro musical:**  
-   - Archivo `intro.mp3`, reproducido al iniciar el nivel o cargar la pantalla principal.
+   - Archivo `intro.mp3`, reproducido al iniciar el nivel.  
 3. **Rediseño estructural del HTML:**  
-   - El **título principal** se mantiene arriba.  
-   - Las **instrucciones** se ubican justo debajo del título (sin sobreponerse al canvas).  
-   - El **puntaje** se mueve a la **parte superior derecha**.  
-   - La **información del juego** (estado, descripción o créditos) ahora aparece en la **parte inferior**.  
-   - Se agregó un **margen visual** alrededor del canvas, para no ocupar toda la pantalla y dar una mejor estética.  
-4. **Transiciones monocromáticas** entre secciones, para suavizar el paso entre distintas áreas visuales.  
-5. **Modo Pantalla Completa:**  
-   - Se añadió un botón que permite expandir el canvas para jugar en pantalla completa.
+   - Título principal arriba.  
+   - Instrucciones justo debajo del título.  
+   - Puntaje en la parte superior derecha.  
+   - Información de créditos en la parte inferior.  
+   - Margen visual alrededor del canvas.  
+4. **Transiciones monocromáticas** entre secciones.  
+5. **Modo Pantalla Completa:** Botón funcional.
 
 ### 🧠 Conclusiones:
-Con esta actualización, el videojuego alcanza una mejor presentación, sonido ambiental y estructura visual clara.  
-Se sientan las bases para futuras mejoras en jugabilidad, niveles y menús dinámicos.
+El juego alcanza mejor presentación, sonido ambiental y estructura visual clara.  
+Se sientan bases para futuras mejoras en jugabilidad, niveles y menús dinámicos.
 
 ---
 
-## 🟢 Versión **v0.1 — Inicial (20/10/2025)**
+## 🟢 Versión 0.1 – Inicial
+
 ### 🧭 Contexto
 Inicio del desarrollo del videojuego **Pumpkin Panic**, creado para el examen de Graficación.  
 Se estableció la estructura base del proyecto y se implementaron los requisitos fundamentales del enunciado.
 
 ### 🎯 Objetivo
-Construir un videojuego completamente funcional que:
-- Muestre elementos 2D en movimiento aleatorio.
-- Permita eliminar objetos mediante clic del mouse.
-- Presente un fondo, puntuación e interfaz con Bootstrap.
-- Inicie con un diseño temático de Halloween.
+Construir un videojuego funcional que:
+- Muestre elementos 2D en movimiento aleatorio.  
+- Permita eliminar objetos mediante clic del mouse.  
+- Presente fondo, puntuación e interfaz con Bootstrap.  
+- Inicie con temática de Halloween.
 
 ### ⚙️ Justificación
-Esta primera versión sirve como **base técnica sólida** para añadir futuras mejoras.  
-El objetivo es cumplir con todos los requerimientos mínimos del examen y dejar preparado el entorno para iteraciones posteriores, manteniendo organización mediante **versionado controlado (Git)**.
+Esta versión sirve como base técnica sólida para añadir futuras mejoras.  
+Cumple con los requisitos mínimos del examen y deja preparado el entorno para iteraciones posteriores.
 
-### 🕹️ Operación del videojuego
-1. **Inicio:** Al cargar la página, el fondo (`BG.jpg`) y las calabazas (`pumpkin.png`) aparecen dentro del canvas.  
-2. **Interacción:**  
-   - Las calabazas se desplazan en direcciones aleatorias (vertical, diagonal, circular, zigzag, etc.).  
-   - El jugador debe hacer clic sobre ellas para eliminarlas y ganar puntos.  
-   - El cursor se reemplaza por un **retículo visual** personalizado.  
-   - Puede pausar el juego presionando **Espacio**.  
-   - Se puede reproducir/pausar música con el botón lateral (requiere archivo `bg-music.mp3` en `/assets`).  
-3. **Interfaz:**  
-   - Contador de puntuación en tiempo real.  
-   - Instrucciones claras y panel lateral con consejos.  
-   - Diseño responsivo mediante **Bootstrap 5**.  
-4. **Recursos:**  
-   - `/assets/BG.jpg`: fondo principal del escenario.  
-   - `/assets/pumpkin.png`: sprite del NPC y favicon.  
-   - `/assets/bg-music.mp3`: música opcional de fondo.  
+### 🕹️ Operación
+1. Fondo (`BG.jpg`) y calabazas (`pumpkin.png`) aparecen en el canvas.  
+2. Calabazas se desplazan en varias direcciones (vertical, diagonal, circular, zigzag).  
+3. Cursor personalizado reemplaza al nativo.  
+4. Pausa con **Espacio**, clic para eliminar calabazas.  
+5. Interfaz con puntaje, instrucciones y diseño responsivo (Bootstrap).  
+6. Recursos: `/assets/BG.jpg`, `/assets/pumpkin.png`, `/assets/bg-music.mp3`.
 
 ### 🧠 Conclusiones
-- Se logró un entorno visual fluido, atractivo y funcional, con elementos animados por programación 2D pura.  
-- La interacción por clic, el manejo de estados (pausa, puntuación, spawn aleatorio) y el diseño modular del código crean una buena base para extender el juego.  
-- El uso del **canvas 2D API** permitió comprender y aplicar los fundamentos de animación y renderizado frame a frame.  
-- El uso de **Bootstrap** y la separación de archivos (`index.html`, `main.js`, `style.css`) facilita la escalabilidad y el mantenimiento del proyecto.  
+- Entorno visual fluido y atractivo.  
+- Interacción clara y modularidad en el código.  
+- Base sólida para futuras versiones con niveles, animaciones y mejoras de jugabilidad.
 
 ---
 
 # 💡 Próximas versiones previstas
 | Versión | Objetivo principal | Descripción breve |
 |----------|--------------------|-------------------|
-| v0.3 | Menú inicial y reinicio | Crear pantalla de inicio, game over y opción de reinicio. |
-| v0.4 | Pulido final | Optimización, ajustes visuales y documentación completa. |
+| 0.4 | Sistema de niveles y temporizador | Añadir dificultad progresiva y control de tiempo por nivel |
+| 0.5 | Pulido final | Optimización, ajustes visuales, animaciones adicionales y documentación completa |
 
 ---
 

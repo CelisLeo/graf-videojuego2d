@@ -1,67 +1,65 @@
-/* style.css - estilos básicos para Pumpkin Panic (v0.2) */
-
-/* Header logo (tamaño pequeño, como en v0.1) */
-.header-logo {
-  width: 48px;
-  height: 48px;
-  object-fit: contain;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #0f0f0f, #2a1a1a);
+  color: #f7e6b3;
+  text-align: center;
 }
 
-/* Canvas container */
-.canvas-wrap {
-  background: #111;
-  border-radius: 12px;
-  padding: 8px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
-  transition: background 1s ease;
+header {
+  background-color: #1a0f0f;
+  padding: 15px 0;
+  border-bottom: 2px solid #3d1d1d;
 }
 
-/* Canvas */
+.title {
+  font-size: 2rem;
+  color: #ffb84d;
+  text-shadow: 2px 2px 6px #000;
+}
+
+.instructions {
+  font-size: 0.95rem;
+  color: #d9bfa8;
+  margin-top: 10px;
+}
+
+main {
+  margin: 20px auto;
+}
+
 #gameCanvas {
-  display: block;
-  width: 100%;
-  height: auto;
-  background-color: black; /* fallback */
-  border-radius: 6px;
-  cursor: none; /* ocultamos cursor nativo para dibujar nuestro puntero */
-  image-rendering: optimizeQuality;
+  border: 3px solid #3b1b1b;
+  border-radius: 10px;
+  background-color: black;
+  box-shadow: 0 0 20px #ff8c00;
+  cursor: none;
 }
 
-/* Small overlay hint text */
-.canvas-hint {
-  pointer-events: none;
-  color: #ddd;
+#scoreboard {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff0b3;
+  text-shadow: 2px 2px 6px #000;
 }
 
-/* Instrucciones debajo del título */
-.instrucciones {
-  color: #bbb;
-  margin-top: 4px;
+footer {
+  background-color: #1a0f0f;
+  color: #e6c07b;
+  border-top: 2px solid #3d1d1d;
 }
 
-/* Info section under canvas */
-.info-section {
-  border-top: 1px solid #333;
-  margin-top: 8px;
-  background: linear-gradient(180deg, rgba(20,20,20,0.4), rgba(10,10,10,0.2));
-  padding-top: 12px;
-  padding-bottom: 18px;
+button#fullscreenBtn {
+  background-color: #3d1d1d;
+  color: #fff5cc;
+  border-radius: 8px;
+  transition: 0.3s;
 }
 
-/* Footer smaller */
-footer {opacity: 0.9; font-size: 0.9rem;}
-
-/* Fullscreen button */
-#fullscreenBtn {
-  transition: background 0.3s;
-}
-#fullscreenBtn:hover {
-  background-color: #444;
-}
-
-/* Reticle drawn by JS may look crisp on high-DPI */
-@media (min-resolution: 2dppx) {
-  #gameCanvas { image-rendering: -webkit-optimize-contrast; }
+button#fullscreenBtn:hover {
+  background-color: #ff6600;
+  color: #1a0f0f;
 }
