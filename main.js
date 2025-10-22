@@ -1,5 +1,5 @@
 // ==============================
-// 🎃 Pumpkin Panic — v0.3.3
+// 🎃 Pumpkin Panic — v0.3.3.1
 // ==============================
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
@@ -15,7 +15,7 @@ pumpkinImage.src = "assets/pumpkin.png";
 const popSound = new Audio("assets/pop.mp3");
 const bgMusic = new Audio("assets/bg-music.mp3");
 bgMusic.loop = true;
-bgMusic.volume = 0;
+bgMusic.volume = 0.4; // Asegúrate de que el volumen no sea 0
 
 let pumpkins = [];
 let particles = [];
@@ -187,22 +187,24 @@ canvas.addEventListener("mousemove", (e) => {
   cursor.y = e.clientY - rect.top;
 });
 
-// --- Iniciar juego ---
+// --- Música ---
+// Variable para asegurar que se inicie solo una vez
 let musicStarted = false;
 
+// Función para iniciar música después de la primera interacción
 function startMusic() {
   if (!musicStarted) {
     bgMusic.play().catch(() => {
-      // En caso de error, el usuario deberá interactuar para reproducir
       console.log("Interactúa para escuchar la música");
     });
     musicStarted = true;
   }
 }
 
-// Iniciar música con cualquier interacción del usuario
-window.addEventListener("click", startMusic);
-window.addEventListener("keydown", startMusic);
+// Iniciar música en cualquier interacción del usuario
+window.addEventListener("click", startMusic, { once: true });
+window.addEventListener("keydown", startMusic, { once: true });
 
+// --- Iniciar juego ---
 for (let i = 0; i < MIN_PUMPKINS; i++) createPumpkin();
 animate();
