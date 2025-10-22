@@ -1,5 +1,5 @@
 // ==============================
-// 🎃 Pumpkin Panic — v0.4
+// 🎃 Pumpkin Panic — v0.3.3
 // ==============================
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
@@ -15,7 +15,7 @@ pumpkinImage.src = "assets/pumpkin.png";
 const popSound = new Audio("assets/pop.mp3");
 const bgMusic = new Audio("assets/bg-music.mp3");
 bgMusic.loop = true;
-bgMusic.volume = 0.4;
+bgMusic.volume = 0;
 
 let pumpkins = [];
 let particles = [];
@@ -128,7 +128,7 @@ function handleClick(x, y) {
 }
 
 function handleKeys() {
-  const speed = 8;
+  const speed = 9;
   if (keys["ArrowUp"]) cursor.y -= speed;
   if (keys["ArrowDown"]) cursor.y += speed;
   if (keys["ArrowLeft"]) cursor.x -= speed;
