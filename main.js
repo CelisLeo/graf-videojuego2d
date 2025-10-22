@@ -188,6 +188,21 @@ canvas.addEventListener("mousemove", (e) => {
 });
 
 // --- Iniciar juego ---
-bgMusic.play();
+let musicStarted = false;
+
+function startMusic() {
+  if (!musicStarted) {
+    bgMusic.play().catch(() => {
+      // En caso de error, el usuario deberá interactuar para reproducir
+      console.log("Interactúa para escuchar la música");
+    });
+    musicStarted = true;
+  }
+}
+
+// Iniciar música con cualquier interacción del usuario
+window.addEventListener("click", startMusic);
+window.addEventListener("keydown", startMusic);
+
 for (let i = 0; i < MIN_PUMPKINS; i++) createPumpkin();
 animate();
